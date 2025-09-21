@@ -2,10 +2,9 @@
   <div id="app">
     <div class="container">
       <NavBar/>
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScaM-_vj1Al64B4rcNFvpcIgPqbRV-pJ9km1plOicFVjcU2pg/viewform?embedded=true" width="640" height="959" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
     </div>
-    <!-- <img class="main-img" src="./assets/logo.png" > -->
-     <img class="main-img" src="./assets/icons/bg.jpg"/>
+  <router-view></router-view>
+
   </div>
 </template>
 
@@ -21,14 +20,23 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 body {
   margin: 0;
+  background-color: #FAF9F6;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #444444;
 }
+
+p {
+    font-size: 15px;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
 }
 
 a,
@@ -42,7 +50,7 @@ a:active {
 
 .main-img {
   max-height: 100vh;
-  width: 100%;
+width: 100%;
 }
 
 .container {

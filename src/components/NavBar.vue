@@ -1,32 +1,41 @@
 <template>
   <div class="container">
-   <div class="navbar">
-    <div class="navbar__container">
-      <img class="navbar__container__logo" src="../assets/icons/logo.png"/>
-      <h5 class="navbar__container__name"><a href="#"> Harry Beckwith Gardens</a></h5>
+    <div class="navbar">
+      <router-link to="/">
+        <div class="navbar__container">
+          <img class="navbar__container__logo" src="../assets/img/logo.png" />
+          <h5 class="navbar__container__name">Harry Beckwith Gardens</h5>
+        </div>
+      </router-link>
+      <nav>
+        <ul>
+          <li>
+            <a href="tel:07446738376"
+              ><button>
+                <img class="phone-icon" src="../assets/icons/phone.svg" />
+                <p>07446 738 376</p>
+              </button></a
+            >
+          </li>
+          <li>
+            <router-link to="/contact"><button>Free Quote</button></router-link>
+          </li>
+        </ul>
+      </nav>
     </div>
-        <nav>
-          <ul>
-            <li><a href="tel:07446738376"><button> <img class="phone-icon" src="../assets/icons/phone.svg"/> <p>07446 738 376</p></button></a></li>
-            <li><a href="#"><button>Book</button></a></li>
-          </ul>
-        </nav>
-      </div>
-      </div>
+  </div>
 </template>
-
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'NavBar',
   props: {
-    msg: String
-  }
+    msg: String,
+  },
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-
 a:visited {
   color: inherit;
 }
@@ -39,7 +48,7 @@ button {
   height: 40px;
   font-size: 14px;
   font-weight: 500;
-  padding:10px;
+  padding: 10px;
   width: 157px;
   border: none;
   border-radius: 5px;
@@ -48,7 +57,6 @@ button {
   color: white;
 
   &:hover {
-
     opacity: 0.3;
   }
 }
@@ -57,7 +65,6 @@ button {
   margin-right: 10px;
 }
 .container {
-
   border-bottom: 1px solid rgb(214, 214, 214);
 }
 .navbar {
@@ -69,7 +76,7 @@ button {
   height: 100%;
 
   &__container {
-    display:flex; 
+    display: flex;
     align-items: center;
 
     &__name {
@@ -80,28 +87,24 @@ button {
       width: 80px;
     }
   }
-  
- 
-
 
   ul {
     display: flex;
 
-      li {
-        list-style-type: none;
-        padding: 10px;
-        margin: 0 10px;
+    li {
+      list-style-type: none;
+      padding: 10px;
+      margin: 0 10px;
 
-        a {
-          color: red;
-            &:hover {
-              color: var(--secondary-color);
-            } 
+      a {
+        color: red;
+        &:hover {
+          color: var(--secondary-color);
         }
       }
+    }
   }
 }
-
 
 @media screen and (min-width: 390px) and (max-width: 767px) {
   .container {
